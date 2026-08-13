@@ -50,35 +50,101 @@
     outline: transparent;
 }
 
+.search-section p, .search-section p > a{
+    color: rgb(0 0 0 / 70%) !important;
+}
+
+.search-section p > a:hover{
+    color: rgb(0, 0, 0) !important;
+}
+
+
 /* searchbar section ends */
+
+
+/* help center search starts */
+
+#radialBg{
+    background: radial-gradient(300% 100% at center top, rgba(169, 185, 250, 0.15) 0%, rgba(251, 251, 251, 0) 25%) !important;
+}
+
+/* help center search ends */
+
 
 /* main content starts */
 
-.leftPane{
-    width: 68%;
+.anchorLine:hover{
+    text-decoration: underline !important;
+}
+.anchorLine:hover .arrowDown > svg{
+    animation: bounce 0.8s linear;
 }
 
-.thinAnchor{
-    text-decoration: none;
-    color: #e50914;
-}
-.thinAnchor:hover{
-    text-decoration: underline;
+@keyframes bounce{
+    25%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
-.contactBtn:hover{
-    background-color: rgb(0 0 0 / 70%) !important;
+.formFixed{
+    max-width: 600px;
+
 }
 
-.rightPane{
-    width: calc(100% - 68%);
+.fixedSearcBar{
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.2s;
 }
 
-.articleTopics{
-    border-top: 6px solid #e50914;
+#fixedSearcBar.showSearchBar{
+    position: fixed;
+    opacity: 1;
+    transform: translateY(0%);
 }
+
+#columMain{
+    max-width: 38rem;
+}
+
+
+
+
 /* main content ends */
 
+
+
+
+
+
+/* accordion starts */
+
+.accoHelp{
+    border: 1px solid rgb(128 128 128 / 40%);
+}
+
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: transparent !important;
+}
+
+.accordion-button:focus{
+    z-index: 3;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none !important;
+}
 
 /* search highlight */
 
@@ -91,6 +157,25 @@
 .hidden-item {
     display: none !important;
 }
+
+/* accordion ends */
+
+
+/* quick links */
+
+.contactBtn:hover{
+    background-color: rgb(0 0 0 / 70%) !important;
+}
+
+@media only screen and (max-width: 624px){
+    #quickLinks{
+        padding: 0 20px !important;
+    }
+}
+
+/* quick links */
+
+
 
 /* footer starts */
 
